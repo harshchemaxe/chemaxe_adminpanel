@@ -1,0 +1,89 @@
+{% block css %} {% endblock css %}
+
+{% block header %}
+
+
+
+
+
+
+
+
+
+<header>
+
+    <div class="container-fluid">
+        <div class="row shadow-sm mt-2">
+        	<div class="col-2 d-flex">
+        		<div class="">
+        			<img src="./static/img/Chemaxe---LOGO.png" width="200" height="70">
+        		</div>
+        	</div>
+            <div class="col pt-3">
+                <nav class="headernav" id="navbar">
+                    <ul class="nav-links" id="nav-links">
+                        <li class="nav-item ">
+                            <a class="navtab" data-toggle="tab" href="# Dashboard">User</a>
+                            <ul class="navdrp">
+                                <li class="text-start"><a href="{{url_for('admin.userlist')}}">• User List</a></li>
+                                <li class="text-start"><a href="{{url_for('admin.brockerlist')}}">• Brocker List</a></li>
+                                <li class="text-start"><a href="{{url_for('admin.communication')}}">• Communication</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navtab">Parameters</a>
+                            <ul class="navdrp">
+                                <li class="text-start"><a href="{{url_for('admin.addproduct')}}">• Add Product</a></li>
+                                <li class="text-start"><a href="{{url_for('admin.product')}}">• Product</a></li>
+                                <li class="text-start"><a href="{{url_for('admin.ports')}}">• Port</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navtab">Trade</a>
+                            <ul class="navdrp">
+                                <li class="text-start"><a href="{{url_for('admin.trade_dashboard')}}">• Dashboard</a></li>
+                                <li class="text-start"><a href="{{url_for('admin.historicalprice')}}">• Hostorical Data</a></li>
+                                <li class="text-start"><a href="/">• Escrow</a></li>
+                                <li class="text-start"><a href="{{url_for('admin.finance')}}">• Finance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="navtab" href="{{url_for('admin.helpandsupport')}}">Support</a></li>
+                        <li class="nav-item"><a class="navtab" href="#">Setting</a></li>
+                    </ul>
+                </nav>
+            </div>
+    <!-- 
+        	<div class="col-6 d-flex mt-2">
+        		<div class="pt-2 px-4 user-f">
+        			<a href="{{url_for('admin.users')}}">User</a>
+        		</div>
+        		<div class="pt-2 px-4 user-f">
+        			<a href="{{url_for('admin.parameters')}}">Parameters</a>
+        		</div>
+        		<div class="pt-2 px-4 user-f">
+        			<a href="{{url_for('admin.trade')}}">Trade</a>
+        		</div>
+                <div class="pt-2 px-4 user-f">
+                    <a href="{{url_for('admin.finance')}}">Finance</a>
+                </div>
+        		<div class="pt-2 px-4 user-f">
+        			<a href="#">Support</a>
+        		</div>
+        		<div class="pt-2 px-4 user-f">
+        			<a href="#">Setting</a>
+        		</div>
+        	</div> -->
+
+        	<div class="col-4 mt-2" >
+        		<div class="pt-2 px-2 text-end" style="text-align: center;">
+        			<div class="d-inline highlighted" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"                                                class="bi bi-bell" viewBox="0 0 16 16" color="orange">
+                                                                      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                                                                    </svg></a></div>
+        			<div class="d-inline highlighted px-1"><a href="#"><img src="./static/img/sh-logo.png" width="35" height="35" alt="" ></a></div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+
+</header>
+{% endblock header%}

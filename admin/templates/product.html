@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block css %} {% endblock css %}
+
+
+
+{% block page_content %}
+
+
+
+<style>
+									@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+									.btn1{
+
+									
+										font-weight: 0;
+										font-size: 14px;
+										color: #fff;
+										background-color: #009a17;
+										padding: 2px 50px;
+										border: solid #009a17 2px;
+										box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+										border-radius: 50px;
+										transition : 511ms;
+										transform: translateY(0);
+										display: flex;
+										flex-direction: row;
+										align-items: center;
+										cursor: pointer;
+									}
+
+									.btn1:hover{
+
+										transition : 511ms;
+										padding: 2px 50px;
+										transform : translateY(-0px);
+										background-color: #fff;
+										color: #009a17;
+										border: solid 2px #009a17;
+									}
+
+
+
+</style>
+
+
+
+<div class="container-fluid">
+	<div class="row m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+		<div>
+			<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-1">
+				
+				<li class="breadcrumb-item text-black opacity-75">
+					<a href="#" class="text-black text-hover-primary">Home</a>
+				</li>
+				<li class="breadcrumb-item text-black opacity-75">Product</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row shadow bg-white  text-center m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+
+		<div class="col">
+            <table id="productlist" class="display" style="width:97%">
+		        <thead>
+		            <tr>
+		                <th>Color code</th>
+		                <th>Letter</th>
+		                <th>Product Name</th>
+		                <th>Payment Methods</th>
+		                <th>Min. Quantity</th>
+		                <th>Multiple</th>
+		                <th>Listing Margin</th>
+		                <th>Edit Product</th>
+		                <th>Status</th>
+		                
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr>
+		                <td><img src="./static/img/Production.png" width="30" height="30" alt="" ></td>
+		                <td>M</td>
+		                <td>Methanol</td>
+		                <td>All</td>
+		                <td>20 tons</td>
+		                <td>5 tons</td>
+		                <td>± 20% of LTP</td>
+		                <td><div class="d-flex"><div><button class="btn1" onclick="window.location.href = '{{url_for('admin.editproduct')}}'">Edit</button></div></div></td>
+		                <td><div class="pt-1 pb-1 px-2 activebg">Active</div></td>
+		                
+		            </tr>
+		            <tr>
+		                <td><img src="./static/img/Production.png" width="30" height="30" alt="" ></td>
+		                <td>A</td>
+		                <td>Acetic acid</td>
+		                <td>All</td>
+		                <td>20 tons</td>
+		                <td>5 tons</td>
+		                <td>± 20% of LTP</td>
+		                <td><div class="d-flex"><div><button class="btn1" onclick="window.location.href = '{{url_for('admin.editproduct')}}'">Edit</button></div></div></td>
+		                <td><div class="pt-1 pb-1 px-2 deactivebg">Deactive</div></td>
+		                
+		            </tr>
+		            <tr>
+		                <td><img src="./static/img/Production.png" width="30" height="30" alt="" ></td>
+		                <td>T</td>
+		                <td>Toluene</td>
+		                <td>All</td>
+		                <td>40 tons</td>
+		                <td>5 tons</td>
+		                <td>± 20% of LTP</td>
+		                <td><div class="d-flex"><div><button class="btn1" onclick="window.location.href = '{{url_for('admin.editproduct')}}'">Edit</button></div></div></td>
+		                <td><div class="pt-1 pb-1 px-2 activebg">Active</div></td>
+		                
+		            </tr>
+		            <tr>
+		                <td><img src="./static/img/Production.png" width="30" height="30" alt="" ></td>
+		                <td>S</td>
+		                <td>Styrene</td>
+		                <td>All</td>
+		                <td>20 tons</td>
+		                <td>5 tons</td>
+		                <td>± 20% of LTP</td>
+		                <td><div class="d-flex"><div><button class="btn1" onclick="window.location.href = '{{url_for('admin.editproduct')}}'">Edit</button></div></div></td>
+		                <td><div class="pt-1 pb-1 px-2 activebg">Active</div></td>
+		                
+		            </tr>
+		        </tbody>
+    		</table>
+    	</div>
+    </div>
+</div>
+
+{% endblock page_content %}

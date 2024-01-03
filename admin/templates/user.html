@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block css %} {% endblock css %}
+
+
+{% block page_content %}
+
+<div class="container-fluid">
+	<div class="row shadow bg-white  text-center m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2"> 
+		<div class="col">
+			<div>
+				<div class="col-6 pt-4 pb-4 d-flex ">
+    				<div class="pt-2 px-4 parameter-f">
+    					<a href="{{url_for('admin.userlist')}}">User List</a>
+    				</div>
+    				<div class="pt-2 px-4 parameter-f">
+    					<a href="{{url_for('admin.brockerlist')}}">Brocker List</a>
+    				</div>
+    				<div class="pt-2 px-4 parameter-f">
+    					<a href="{{url_for('admin.communication')}}">Communication</a>
+    				</div>
+    			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock page_content %}

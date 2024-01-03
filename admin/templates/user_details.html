@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% block css %} {% endblock css %}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+{% block page_content %}
+ 
+<div class="container-fluid">
+	<div class="row m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+		<div>
+			<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-1">
+				<!--begin::Item-->
+				<li class="breadcrumb-item text-black opacity-75">
+					<a href="#" class="text-black text-hover-primary">Home</a>
+				</li>
+				<li class="breadcrumb-item text-black opacity-75">
+					<a href="{{url_for('admin.userlist')}}" class="text-black text-hover-primary">User List</a>
+				</li>
+				<li class="breadcrumb-item text-black opacity-75">User Details</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row shadow bg-white  text-center m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+		<div class="col">
+			<div class="row p-1 pt-4 ">
+				<div class="col-10 d-flex pb-1 border-bottom">
+
+					
+					<div class="f25px text-start"><h4>Abc ltd. </h4></div>
+					
+				</div>
+				<div class="col-2 border-bottom ">
+					<div class="d-flex">
+						<div class="px-2 f20px">User Status :</div>
+						<div class="pt-1 px-2 usr_act_bg">Active</div>
+						<!-- <div class="pt-1 px-2 usr_dact_bg">Deactive</div> -->
+					</div>
+				</div>
+			</div>
+		<form method="post">
+			<div class="row">
+				<div class="col-8">
+					<div class="row">
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Email :</div>
+									<div class="detailsbr px-2">Abc.ltd@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Name :</div>
+									<div class="detailsbr px-2">Abc ltd</div>
+								</div>
+							</div>
+						</div>
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Phone No :</div>
+									<div class="detailsbr px-2">9823797349</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline">
+									<div class=" px-1">Type :</div>
+									<div class="d-flex pt-1">
+										<div class="px-2"><input type="radio" name="type" value="user" />
+																	<label for="user" >User</label>
+										</div>
+										<div class="px-2"><input type="radio" name="type" value="brocker" />
+																	<label for="brocker" >Brocker</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Is Verified :</div>
+									<div class="form-check form-switch px-5	pt-1">
+									  	<input class="form-check-input" type="checkbox" role="switch" id="isverified" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Email Verified :</div>
+									<div class="form-check form-switch px-5	pt-1">
+									  	<input class="form-check-input" type="checkbox" role="switch" id="emailverified" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Phone Verified :</div>
+									<div class="form-check form-switch px-5	pt-1">
+									  	<input class="form-check-input" type="checkbox" role="switch" id="phoneverified" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Can Buy :</div>
+									<div class="form-check form-switch px-5	pt-1">
+									  	<input class="form-check-input" type="checkbox" role="switch" id="canbuy" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 text-start pt-3 ">
+							<div class="pt-3 pb-1  ">
+								<div class="d-inline ">
+									<div class="pb-1 px-1">Can Sell :</div>
+									<div class="form-check form-switch px-5	pt-1">
+									  	<input class="form-check-input" type="checkbox" role="switch" id="cansell" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row">
+						<div class="col pt-3 ">
+							<div class="card m-3" style="width: 400px;">
+								<div class="card-header text-center">
+									<div class="d-flex justify-content-between">
+						            	<span class="mt-2"><b>Products Selected</b></span>
+						            	<span>	
+						            		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" >
+										 	       Add More
+										    </button>
+										</span>
+						            </div>
+								</div>
+								<ul class="list-group list-group-flush d-flex">
+									<li class="list-group-item">
+										<div class="d-flex justify-content-between">
+							            	<span>Methanol</span><span><button type="button" class="btn-close" aria-label="Close"></button></span>
+							            </div>
+									</li>
+									<li class="list-group-item">
+										<div class="d-flex justify-content-between">
+							            	<span>Methanol</span><span><button type="button" class="btn-close" aria-label="Close"></button></span>
+							            </div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="row mt-5">
+						<div class="col text-center">
+							<button type="button" class="btn btn-success">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+			<div class="mt-5 "><hr class="hr"/></div>
+			<div class="row mt-4">
+				<div class="col text-start pt-3 user-f d-flex">
+					<div class="border-bottom pb-2 ">Trading Summary (Last 1D)</div>
+					<div class="px-3"><div class="p-2" style="background-color: #E5DDFF; border-radius: 20px; font-size: 18px">Last Trade : 5.20 PM</div></div>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col mt-3 mb-3">
+					<table >
+						<thead>
+							<tr>
+								<th>Product</th>
+								<th>Order Status</th>
+								<th>Order Type</th>
+								<th>Quantity (tons)</th>
+								<th>Port</th>
+								<th>Order Price</th>
+								<th>LTP</th>
+								<th>Time</th>
+								<th>Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Methanol</td>
+								<td>Complete</td>
+								<td>Buy</td>
+								<td>120</td>
+								<td>Ex. Kandla</td>
+								<td>22.67</td>
+								<td>23.10</td>
+								<td>01:20:54</td>
+								<td><a href="#">Details</a></td>
+							</tr>
+							<tr>
+								<td>Methanol</td>
+								<td>Complete</td>
+								<td>Buy</td>
+								<td>120</td>
+								<td>Ex. Kandla</td>
+								<td>22.67</td>
+								<td>23.10</td>
+								<td>01:20:54</td>
+								<td><a href="#">Details</a></td>
+							</tr>
+							<tr>
+								<td>Methanol</td>
+								<td>Complete</td>
+								<td>Buy</td>
+								<td>120</td>
+								<td>Ex. Kandla</td>
+								<td>22.67</td>
+								<td>23.10</td>
+								<td>01:20:54</td>
+								<td><a href="#">Details</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background-color: white;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                	<div class="pb-2">
+                		<input type="checkbox" id="p1" name="p1" value="Methanol">
+						<label for="p1" class="px-1">Methanol</label><br>
+                	</div>
+                    <div class="pb-2">
+                		<input type="checkbox" id="p1" name="p1" value="Methanol">
+						<label for="p1" class="px-1">Methanol</label><br>
+                	</div>
+                	<div class="pb-2">
+                		<input type="checkbox" id="p1" name="p1" value="Methanol">
+						<label for="p1" class="px-1">Methanol</label><br>
+                	</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+{% endblock page_content %}
+
+

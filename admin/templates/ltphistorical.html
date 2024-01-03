@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block css %} {% endblock css %}
+
+
+{% block page_content %}
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+	<div class="row m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+		<div>
+			<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-1">
+				
+				<li class="breadcrumb-item text-black opacity-75">
+					<a href="#" class="text-black text-hover-primary">Home</a>
+				</li>
+				<li class="breadcrumb-item text-black opacity-75">
+					<a href="{{url_for('admin.historicalprice')}}" class="text-black text-hover-primary">Historical Data</a>
+				</li>
+				<li class="breadcrumb-item text-black opacity-75">LTP Historical</li>
+			</ul>
+		</div>
+	</div>
+<form method="post">
+	<div class="row shadow bg-white  text-center m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+		<div class="col">
+			<div class="row">
+				<div class="col-3 text-start pt-4">
+					<div class="pt-4 pb-1 px-2">
+						<div class="d-inline ">
+							<label for="commtype">Product : </label>
+								<select name="commtype" id="commtype" style="border-color: green; border-radius: 5px;">
+		  							<option value="action 1">Methanol</option>
+		  							<option value="action 2">N-butenol</option>
+		  							<option value="action 3">Isopropyl alcohol</option>
+		  							<option value="action 4">Toluene</option>
+		  							<option value="action 4">C9</option>
+		  							<option value="action 4">Phenol</option>
+		  							<option value="action 4">Vinyl acetate monomer</option>
+		  							<option value="action 4">Xylene</option>
+		  							<option value="action 4">Acetic Acid</option>
+		  							<option value="action 4">Butyl acetate monomer</option>
+								</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 pt-4 text-start">
+					<div class="pt-4 pb-1">
+						<div class="d-inline ">
+							<label for="commtype">Port : </label>
+								<select name="commtype" id="commtype" style="border-color: green; border-radius: 5px;">
+		  							<option value="action 1">Hajira</option>
+		  							<option value="action 2">Kandla</option>
+		  							<option value="action 3">Mumbai</option>
+		  							<option value="action 4">Mundra</option>
+								</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 pt-4 text-start">
+					<div class="pt-4 pb-1">
+						<div class="d-inline ">
+							<label for="commtype">Price Type : </label>
+								<select name="commtype" id="commtype" style="border-color: green; border-radius: 5px;">
+		  							<option value="action 1">Cash</option>
+		  							<option value="action 2">Credit</option>
+		  							<option value="action 3">COB</option>
+								</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 pt-4 text-start">
+					<div class="pt-4 pb-1">
+						<div class="d-inline ">Select Date:
+							<input type="text" name="daterange" value="01/01/2023 - 01/15/2023" style="border-color: green; border-radius: 5px;"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-5 pb-2">
+				<div class="col text-center">
+					<button type="button" class="btn btn-success">Download</button>
+				</div>
+		</div>
+	</div>
+</form>
+</div>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script>
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
+</script>
+
+
+{% endblock page_content %}

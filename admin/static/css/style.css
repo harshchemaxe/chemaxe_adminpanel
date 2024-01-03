@@ -1,0 +1,272 @@
+a{
+    color: #009A17;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer {
+  margin-top: auto;
+}
+
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
+}
+
+.chemaxe-clr{
+    color: #009A17;
+}
+
+.user-f{
+    font-size: 22px;
+}
+
+.parameter-f{
+    font-size: 18px;
+}
+
+.rounded_top{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.rounded_bottom{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.port-bg{
+    background-color: #BEBFFF;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.cashbg{
+    background-color: #FFD2AF;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.completed-bg{
+    background-color: #bfffdc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.pending-bg{
+    background-color: #FFCF00;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.incompleted-bg{
+    background-color: #ffc2c2;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.f30px{
+    font-size: 30px;
+}
+
+.f25px{
+    font-size: 25px;
+}
+
+.f20px{
+    font-size: 20px;
+}
+
+.f13px{
+    font-size: 13px;
+}
+
+.companyp{
+    background-color: #009A17;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.infobox{
+    border-radius: 10px;
+    border-color: #22E57B;
+
+}
+
+.kycbtn{
+    border-radius: 10px;
+}
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.financebr{
+    border-radius: 10px;
+    border-color: #009A17;
+    border-width: 2px;
+    color: #009a17;
+    border-style: double;  
+}
+
+.detailsbr{
+    border-radius: 5px;
+    border-color: #009A17;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.usr-btn{
+    border-radius: 20px;
+    color: white;
+    background-color: #009A17;
+}
+
+.activebg{
+    background-color: #63E452;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.deactivebg{
+    background-color: #ABB2B9;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.usr_act_bg{
+    background-color: #B1FFA7;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.usr_dact_bg{
+    background-color: #FF9191;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.emailbtn{
+    color: #fff;
+    background-color: white;
+    border: solid #ffffff 2px;
+    border-radius: 50px;
+    transition : 511ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td, th {
+    border: 3px #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #EBEBEB;
+}
+
+#userlist th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #b8daff;
+  color: black;
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+.btn1{
+
+
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #009a17;
+    padding: 2px 50px;
+    border: solid #009a17 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 511ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+a:link{text-decoration:none}
+
+.vn-green a{
+    background-color:#27ae60;
+    display:inline-block;
+    position:relative;
+    margin:5px 5px;
+    padding:10px 10px 10px;
+    color:#fff;
+    transition:all 0.4s ease;
+    border-radius: 5px;
+}
+
+
+.vn-green a:hover{
+  background:#2c3e50
+}
+
+.mddetails{
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

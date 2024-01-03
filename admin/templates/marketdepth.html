@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+{% block css %} {% endblock css %}
+
+
+{% block page_content %}
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+	jQuery( document ).ready(function() {
+    new DataTable('#buyorder');
+});
+	
+</script>
+
+<script type="text/javascript">
+	jQuery( document ).ready(function() {
+    new DataTable('#sellorder');
+});
+	
+</script>
+
+
+
+
+<div class="container-fluid">
+	<div class="row shadow bg-white  text-center m-1 mt-4 pt-2 mt-sm-2 mb-2 pb-2">
+		<div class="col">
+			<div class="row p-1 pt-4 ">
+				<div class="col d-flex">
+					<div class=" px-2 f25px text-start"><h3>Market Depth </h3></div>
+				</div>
+			</div>
+			<div class="row p-1 pt-4">
+				<div class="col-2 d-flex">
+					<div class="px-2 text-start"><h4>Methanol</h4></div>
+					<div>
+						<div class="pt-1 pb-1 px-3 port-bg">Hajira</div>
+					</div>
+					<div class="px-1">
+						<div class="pt-1 pb-1 px-3 cashbg">Cash</div>
+					</div>
+					
+				</div>
+				<div class="col">
+					<div class="px-2 text-start"><h4>23.75 <p style="color:green;">+0.75 (2.78%)</p></h4></div>
+				</div>
+				<div class="col">
+					<div class="px-2 text-end">
+						<div class="d-inline ">
+							<label for="marketd"></label>
+								<select name="marketd" id="commtype">
+		  							<option value="action 1">Cash</option>
+		  							<option value="action 1">Credit</option>
+		  							<option value="action 1">COB</option>
+								</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="pt-2 text-start">
+						<img src="./static/img/chart1.png" width="1000" height="450" alt="" >
+					</div>
+					
+				</div>
+				<div class="col pt-5">
+					<div class="px-1 border mddetails">
+						<div class="row">
+							<div class="col text-start text-muted">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">Day High</p></div>
+							</div>
+							<div class="col text-end">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">26.7</p></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col text-start text-muted">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">Day Low</p></div>
+							</div>
+							<div class="col text-end">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">25</p></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col text-start text-muted">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">Open Price</p></div>
+							</div>
+							<div class="col text-end">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">23.7</p></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col text-start text-muted">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">Previous Close</p></div>
+							</div>
+							<div class="col text-end">
+								<div class="px-2 pt-3 border-bottom"><p style="font-size:20px;">16.7</p></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col text-start text-muted">
+								<div class="px-2 pt-3 "><p style="font-size:20px;">Daily Variance</p></div>
+							</div>
+							<div class="col text-end">
+								<div class="px-2 pt-3 "><p style="font-size:20px;">16.7</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 pt-3">
+					<div class="pt-2 border mddetails">
+						<div class="row">
+							<div class="col"><p style="color:green; font-size: 25px;">Buy Orders</p></div>
+						</div>
+						<div class="row">
+							<div class="col pt-2">
+								<div class="px-3 pb-2">
+									<table id="buyorder" class="display" style="width:97%">
+								        <thead>
+								            <tr>
+								                <th>Time</th>
+								                <th>Company Name</th>
+								                <th>Price</th>
+								                <th>QTY</th>
+								            </tr>
+								        </thead>
+								        <tbody>
+								            <tr>
+								                <td>12:56 PM</td>
+								                <td>Abc Ltd.</td>
+								                <td><p style="color:green;">25.4</p></td>
+								                <td>10</td>
+								            </tr>
+								            <tr>
+								                <td>12:56 PM</td>
+								                <td>xyz Ltd.</td>
+								                <td><p style="color:green;">25.4</p></td>
+								                <td>20</td>
+								            </tr>
+								            <tr>
+								                <td>1:40 PM</td>
+								                <td>XYZ Ltd.</td>
+								                <td><p style="color:green;">26</p></td>
+								                <td>15</td>
+								            </tr>
+								            <tr>
+								                <td>11:03 AM</td>
+								                <td>123 Ltd.</td>
+								                <td><p style="color:green;">23.5</p></td>
+								                <td>6</td>
+								            </tr>
+								            <tr>
+								                <td>4:44 PM</td>
+								                <td>Lorem Ltd.</td>
+								                <td><p style="color:green;">22.40</p></td>
+								                <td>5</td>
+								            </tr>
+								        </tbody>
+								    </table>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 pt-3">
+					<div class="pt-2 border mddetails">
+						<div class="row">
+							<div class="col "><p style="color:red; font-size: 25px;">Sell Orders</p></div>
+						</div>
+						<div class="row">
+							<div class="col pt-2">
+								<div class="px-3 pb-2">
+									<table id="sellorder" class="display" style="width:97%">
+								        <thead>
+								            <tr>
+								                <th>Time</th>
+								                <th>Company Name</th>
+								                <th>Price</th>
+								                <th>QTY</th>
+								            </tr>
+								        </thead>
+								        <tbody>
+								            <tr>
+								                <td>12:56 PM</td>
+								                <td>Abc Ltd.</td>
+								                <td><p style="color:red;">25.4</p></td>
+								                <td>10</td>
+								            </tr>
+								            <tr>
+								                <td>12:56 PM</td>
+								                <td>xyz Ltd.</td>
+								                <td><p style="color:red;">25.4</p></td>
+								                <td>20</td>
+								            </tr>
+								            <tr>
+								                <td>1:40 PM</td>
+								                <td>XYZ Ltd.</td>
+								                <td><p style="color:red;">26</p></td>
+								                <td>15</td>
+								            </tr>
+								            <tr>
+								                <td>11:03 AM</td>
+								                <td>123 Ltd.</td>
+								                <td><p style="color:red;">23.5</p></td>
+								                <td>6</td>
+								            </tr>
+								            <tr>
+								                <td>4:44 PM</td>
+								                <td>Lorem Ltd.</td>
+								                <td><p style="color:red;">22.40</p></td>
+								                <td>5</td>
+								            </tr>
+								        </tbody>
+								    </table>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{%  endblock page_content %}

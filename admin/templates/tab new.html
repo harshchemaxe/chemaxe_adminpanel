@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Console</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: white;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: green;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #FFD084;
+      color: black;
+    }
+
+  
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown:hover {
+      background-color: #FFE4B8;
+      color: orange;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: orange;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #FFE4B8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="headernav" id="navbar">
+
+                    <div class="dropdown">
+                      <button class="dropbtn">User</button>
+                      <div class="dropdown-content">
+                        <a href="{{url_for('admin.userlist')}}">• User List</a>
+                        <a href="{{url_for('admin.brockerlist')}}">• Brocker List</a>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <button class="dropbtn">Parameters</button>
+                      <div class="dropdown-content">
+                        <a href="{{url_for('admin.userlist')}}">• User List</a>
+                        <a href="{{url_for('admin.brockerlist')}}">• Brocker List</a>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <button class="dropbtn">Trade</button>
+                      <div class="dropdown-content">
+                        <a href="{{url_for('admin.userlist')}}">• User List</a>
+                        <a href="{{url_for('admin.brockerlist')}}">• Brocker List</a>
+                      </div>
+                    </div>
+                </nav>
+
+<!-- Add your admin console content here -->
+
+</body>
+</html>
